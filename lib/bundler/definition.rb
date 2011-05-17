@@ -160,7 +160,7 @@ module Bundler
     def index
       @index ||= Index.build do |idx|
         @sources.each do |s|
-          idx.add_source(s)
+          idx.add_source(s.specs)
         end
       end
     end
